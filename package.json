@@ -1,14 +1,11 @@
 {
-  "name": "my-project",
+  "name": "fullstack-project",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "server": "cd backend && npm start",
-    "client": "cd frontend && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "install-all": "npm install --prefix backend && npm install --prefix frontend"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.0"
+    "start": "node backend/server.js",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "install:all": "cd frontend && npm install && cd ../backend && npm install",
+    "build:frontend": "cd frontend && npm run build"
   }
 }
